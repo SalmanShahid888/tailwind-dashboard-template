@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { Link, NavLink, redirect, useNavigate } from "react-router-dom";
 
 const SignUpForm = () => {
   const [userEmail, setUserEmail] = useState("");
@@ -12,9 +12,8 @@ const SignUpForm = () => {
     } else {
       localStorage.setItem("user", JSON.stringify(userEmail));
       localStorage.setItem("password", JSON.stringify(userPassword));
-      setUserEmail("");
-      setUserPasword("");
-      redirect("/dashboard");
+      setUserEmail(" ");
+      setUserPasword(" ");
     }
   };
 
@@ -77,13 +76,13 @@ const SignUpForm = () => {
                 </div>
               </div>
               <div>
-                <button
-                  onClick={onFormSubmit}
-                  type="submit"
+                <NavLink
+                  to="/dashboard"
+                  end
                   className="w-full flex justify-center bg-purple-800  hover:bg-purple-700 text-gray-100 p-3  rounded-lg tracking-wide font-semibold  cursor-pointer transition ease-in duration-500"
                 >
-                  Sign Up
-                </button>
+                  <span>Sign Up</span>
+                </NavLink>
               </div>
               <div className="flex items-center justify-center space-x-2 my-5">
                 <span className="h-px w-16 bg-gray-100"></span>
