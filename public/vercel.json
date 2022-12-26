@@ -1,6 +1,6 @@
 {
   "rewrites": [
     { "src": "/", "dest": "/" },
-    { "src": "/dashboard", "dest": "/" }
+    { "src": "/dashboard", "dest": "/pages/dashboard.jsx" }
   ]
 }
