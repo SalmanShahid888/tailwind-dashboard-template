@@ -9,6 +9,7 @@ import "./charts/ChartjsConfig";
 import Dashboard from "./pages/Dashboard";
 import LoginForm from "./pages/LoginForm";
 import SignUpForm from "./pages/Form";
+import Profile from "./pages/Profile";
 
 function App() {
   const location = useLocation();
@@ -22,9 +23,9 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<LoginForm />} />
-        <Route exact path="/dashboard" element={<Dashboard />} />
-        <Route exact path="/form" element={<SignUpForm />} />
+        <Route exact path="/" element={<Dashboard />} />
+        <Route exact path="/login" element={<LoginForm />} />
+        <Route exact path="/profile" element={<Profile />} />
       </Routes>
     </>
   );
